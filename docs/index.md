@@ -8,7 +8,7 @@ This documentation is a Open Source project. You're welcome and encourage to con
 
 Portainer is a management tool simplifies container management in Docker, Swarm, Kubernetes, ACI and Edge environments. It's used by software engineers to speed up software deployments, troubleshoot problems and simplify migrations.
 
-Portainer works by hiding the complexity that makes managing contains hard behind an easy to use GUI. By negating the need for users to use CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so simple, anyone can do it.
+Portainer works by hiding the complexity that makes managing containers hard behind an easy to use GUI. By negating the need for users to use CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so simple, anyone can do it.
 
 The Portainer development team is here to assist you on your container journey; you can engage with them any time through our community-based support channels.
 
