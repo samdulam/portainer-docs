@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/icon.webp">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -200,7 +200,6 @@
       
       
 
-
   
   
   
@@ -215,7 +214,6 @@
       
       
       
-
 
   
   
@@ -324,29 +322,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-versions" class="md-nav__link">
-    Supported Docker Versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-swarm" class="md-nav__link">
-    Supported Docker Swarm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-kubernetes-versions" class="md-nav__link">
-    Supported Kubernetes versions
+  <a href="#validated-configurations" class="md-nav__link">
+    Validated Configurations
   </a>
   
 </li>
@@ -2211,7 +2188,6 @@
       
       
       
-
 
   
   
@@ -4352,7 +4328,6 @@
       
       
 
-
   
   
   
@@ -4368,7 +4343,6 @@
       
       
 
-
   
   
   
@@ -4383,7 +4357,6 @@
       
       
       
-
 
   
   
@@ -4564,7 +4537,6 @@
       
       
 
-
   
   
   
@@ -4653,29 +4625,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-versions" class="md-nav__link">
-    Supported Docker Versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-swarm" class="md-nav__link">
-    Supported Docker Swarm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-kubernetes-versions" class="md-nav__link">
-    Supported Kubernetes versions
+  <a href="#validated-configurations" class="md-nav__link">
+    Validated Configurations
   </a>
   
 </li>
@@ -4705,26 +4656,14 @@
                 
                 
                 <h1 id="requirements">Requirements</h1>
-<p>In this article, you will find information about the supported platforms and Docker versions.</p>
-<h2 id="supported-platforms">Supported Platforms</h2>
-<p>Portainer can be deployed on the following platforms:</p>
-<ul>
-<li>Linux AMD64</li>
-<li>Linux ARM64</li>
-<li>Windows AMD64</li>
-</ul>
-<h2 id="supported-docker-versions">Supported Docker Versions</h2>
-<p>The required Docker version to have full support is 19.01 or the newest. Docker 19 is partially supported. Older versions than indicated here, are not supported.</p>
-<h2 id="supported-docker-swarm">Supported Docker Swarm</h2>
-<p>Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported.</p>
-<h2 id="supported-kubernetes-versions">Supported Kubernetes versions</h2>
-<p>The following versions of Kubernetes are fully supported:</p>
-<ul>
-<li>1.17</li>
-<li>1.18</li>
-<li>1.19</li>
-</ul>
+<p>Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.</p>
+<p>To try and alleviate confusion as to what we test against, we gave documented these configurations are the only configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). </p>
+<h2 id="validated-configurations">Validated Configurations</h2>
+<p><img src="https://www.portainer.io/hs-fs/hubfs/validated_configs-2.png?width=690&name=validated_configs-2.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" /></p>
 <h2 id="notes">Notes</h2>
+<p>If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.</p>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md">Contribute to these docs</a>.</p>
                 
               
@@ -4841,15 +4780,15 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../../..",
           features: ['instant'],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+            worker: "../../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
