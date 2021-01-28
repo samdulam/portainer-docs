@@ -2245,36 +2245,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-versions" class="md-nav__link">
-    Supported Docker Versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-swarm" class="md-nav__link">
-    Supported Docker Swarm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-kubernetes-versions" class="md-nav__link">
-    Supported Kubernetes versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#validated-configurations" class="md-nav__link">
+    Validated Configurations
   </a>
   
 </li>
@@ -4646,36 +4618,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-platforms" class="md-nav__link">
-    Supported Platforms
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-versions" class="md-nav__link">
-    Supported Docker Versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-docker-swarm" class="md-nav__link">
-    Supported Docker Swarm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-kubernetes-versions" class="md-nav__link">
-    Supported Kubernetes versions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#validated-configurations" class="md-nav__link">
+    Validated Configurations
   </a>
   
 </li>
@@ -4698,26 +4642,41 @@
                 
                 
                 <h1 id="requirements">Requirements</h1>
-<p>In this article, you will find information about the supported platforms and Docker versions.</p>
-<h2 id="supported-platforms">Supported Platforms</h2>
-<p>Portainer can be deployed on the following platforms:</p>
-<ul>
-<li>Linux AMD64</li>
-<li>Linux ARM64</li>
-<li>Windows AMD64</li>
-</ul>
-<h2 id="supported-docker-versions">Supported Docker Versions</h2>
-<p>The required Docker version to have full support is 19.01 or the newest. Docker 19 is partially supported. Older versions than indicated here, are not supported.</p>
-<h2 id="supported-docker-swarm">Supported Docker Swarm</h2>
-<p>Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported.</p>
-<h2 id="supported-kubernetes-versions">Supported Kubernetes versions</h2>
-<p>The following versions of Kubernetes are fully supported:</p>
-<ul>
-<li>1.17</li>
-<li>1.18</li>
-<li>1.19</li>
-</ul>
-<h2 id="notes">Notes</h2>
+<p>Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.</p>
+<p>To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). </p>
+<h2 id="validated-configurations">Validated Configurations</h2>
+<table>
+<thead>
+<tr>
+<th>Portainer Version</th>
+<th>Release Date</th>
+<th>Docker Version</th>
+<th>Kubernetes Version</th>
+<th>Architectures</th>
+<th>Operating Systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business 2.0 (latest)</td>
+<td>Dec 3, 2020</td>
+<td>19.03.13</td>
+<td>1.17.13 1.18.6 1.19.3</td>
+<td>ARM64, x86_64</td>
+<td>Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 &amp; CentOS7</td>
+</tr>
+<tr>
+<td>## Notes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.</p>
+<p>Business Edition Validated Configurations can be found <a href="https://documentation.portainer.io/v2.0-be/deploy/requirements/">here</a></p>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md">Contribute to these docs</a>.</p>
                 
               
