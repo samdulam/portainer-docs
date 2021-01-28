@@ -328,13 +328,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4631,13 +4624,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4659,14 +4645,70 @@
 <p>Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.</p>
 <p>To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). </p>
 <h2 id="validated-configurations">Validated Configurations</h2>
-<p><img src="https://www.portainer.io/hs-fs/hubfs/validated_configs-2.png?width=690&name=validated_configs-2.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
-<br>
-<BR>
-<br></p>
-<h2 id="notes">Notes</h2>
+<table>
+<thead>
+<tr>
+<th>Portainer Version</th>
+<th>Release Date</th>
+<th>Docker Version</th>
+<th>Kubernetes Version</th>
+<th>Architectures</th>
+<th>Operating Systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.23.2</td>
+<td>March 25, 2020</td>
+<td>19.03.6</td>
+<td>N/A</td>
+<td>ARM32, ARM64, x86_64</td>
+<td>Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 &amp; CentOS7</td>
+</tr>
+<tr>
+<td>1.24.0</td>
+<td>June 2, 2020</td>
+<td>19.03.10</td>
+<td>N/A</td>
+<td>ARM32, ARM64, x86_64</td>
+<td>Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 &amp; CentOS7</td>
+</tr>
+<tr>
+<td>1.24.1 (latest)</td>
+<td>July 23, 2020</td>
+<td>19.03.12</td>
+<td>N/A</td>
+<td>ARM32, ARM64, x86_64</td>
+<td>Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 &amp; CentOS 7</td>
+</tr>
+<tr>
+<td>Community 2.0</td>
+<td>Aug 31, 2020</td>
+<td>19.03.12</td>
+<td>1.17.13 1.18.6 1.18.9 1.19.3</td>
+<td>ARM64, x86_64</td>
+<td>Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 Release 1809 Ubuntu 18.04 &amp; CentOS 7</td>
+</tr>
+<tr>
+<td>Community 2.0.1 (Latest)</td>
+<td>Jan 7, 2020</td>
+<td>20.10.0</td>
+<td>1.17.13 1.18.9 1.19.3 1.20.0</td>
+<td>ARM64, x86_64</td>
+<td>Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 &amp; CentOS 7</td>
+</tr>
+<tr>
+<td>## Notes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.</p>
+<p>Business Edition Validated Configurations can be found <a href="https://documentation.portainer.io/v2.0-be/deploy/requirements/">here</a></p>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md">Contribute to these docs</a>.</p>
                 
               
