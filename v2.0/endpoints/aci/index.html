@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/icon.webp">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.7">
     
     
       
@@ -492,6 +492,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
@@ -4632,6 +4639,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -4671,6 +4685,10 @@
                 
                 <h1 id="add-an-azure-container-instance-endpoint">Add an Azure Container Instance Endpoint</h1>
 <p>Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands via CLI or go to the Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.</p>
+<h2 id="constraints">Constraints</h2>
+<p>The following scenarios are not supported
+* ACI Persistent storage
+* Private networks</p>
 <h2 id="requirements">Requirements</h2>
 <p>Before connecting to your Azure Subscription, you need to create an Azure AD Application. For more information see the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal">Microsoft Documentation</a>.</p>
 <h2 id="adding-an-aci-endpoint">Adding an ACI Endpoint</h2>
