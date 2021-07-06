@@ -5052,7 +5052,14 @@
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight containers on Kubernetes. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<p>Regardless of your configuration, you will need:</p>
+<ul>
+<li>A working and up to date Kubernetes cluster</li>
+<li>Access to run Helm or kubectl commands on your cluster</li>
+<li>Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary <code class="highlight"><span class="no">ServiceAccount</span></code> and <code class="highlight"><span class="no">ClusterRoleBinding</span></code> for it to access the Kubernetes cluster.</li>
+<li>A default StorageClass configured (see below)</li>
+</ul>
 <p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
 <p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
 <div class="admonition warning">

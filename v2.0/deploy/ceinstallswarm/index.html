@@ -5052,8 +5052,15 @@
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
-<p>Note that the recommended deployment mode when using Swarm is using the Portainer Agent.</p>
+<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<!-- **Note:** The recommended deployment mode when using Swarm is using the Portainer Agent. -->
+
+<p>Regardless of your configuration, you will need:</p>
+<ul>
+<li>The latest version of Docker installed and working, with swarm mode enabled and your nodes added. You can refer to <a href="https://docs.docker.com/get-docker/">the Docker documentation</a> for platform-specific instructions.</li>
+<li>Administrator or sudo access on the machine that will host the Portainer Server service.</li>
+<li>Administrator or sudo access on the machines where you will deploy the Portainer Agent if you need to add more endpoints to your Portainer instance.</li>
+</ul>
 <p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
 <p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
 <div class="admonition warning">
