@@ -5061,29 +5061,29 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li>Administrator or sudo access on the machine that will host the Portainer Server service.</li>
 <li>Administrator or sudo access on the machines where you will deploy the Portainer Agent if you need to add more endpoints to your Portainer instance.</li>
 </ul>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0/deploy/requirements">requirements</a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Agent Versions</p>
 <p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
 </div>
 <h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
-<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):</p>
+<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Docker Swarm on Linux</label><div class="tabbed-content">
 <div class="admonition abstract">
 <h3 id="portainer-server-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.</p>
+<p>Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.</p>
 <p><div class="highlight"><pre><span></span><code>curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker stack deploy -c portainer-agent-stack.yml portainer
 </code></pre></div></p>
-<p><b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable from the UI of Portainer.</p>
+<p><b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable this from the UI of Portainer.</p>
 <h3 id="portainer-agent-only-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
-<p>Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.</p>
+<p>To deploy Portainer Agent on a remote Linux Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.</p>
 <p>First create the network:</p>
 <div class="highlight"><pre><span></span><code>docker network create --driver overlay --attachable portainer_agent_network
 </code></pre></div>
-<p>The following step is deploy the Agent:</p>
+<p>The following step will deploy the Agent:</p>
 <div class="highlight"><pre><span></span><code>docker service create --name portainer_agent --network portainer_agent_network --publish <span class="nv">mode</span><span class="o">=</span>host,target<span class="o">=</span><span class="m">9001</span>,published<span class="o">=</span><span class="m">9001</span> -e <span class="nv">AGENT_CLUSTER_ADDR</span><span class="o">=</span>tasks.portainer_agent --mode global --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/lib/docker/volumes,dst<span class="o">=</span>/var/lib/docker/volumes --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/,dst<span class="o">=</span>/host portainer/agent
 </code></pre></div>
 </div>
@@ -5091,23 +5091,22 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Docker Swarm on Windows WSL / Docker Desktop</label><div class="tabbed-content">
 <div class="admonition abstract">
 <p>Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Read this guide to know more about WSL/WSL2</a></p>
-<p>Use the following Docker Swarmcommands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):</p>
+<p>Use the following Docker Swarm commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
 <h3 id="portainer-server-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
-of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.</p>
-<p>Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this running the following command:</p>
+<p>Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.</p>
+<p>Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this by running the following command:</p>
 <div class="highlight"><pre><span></span><code>docker swarm init
 </code></pre></div>
 <p>The terminal will reply with this:</p>
 <div class="highlight"><pre><span></span><code>Swarm initialized: current node <span class="o">(</span>15gbf4d66mvzk3die00sgirpf<span class="o">)</span> is now a manager.
 
-To add a worker to this swarm, run the following command:
+To add a worker to this swarm, run the &lt;code&gt;swarm join&lt;/code&gt; <span class="nb">command</span> that is provided when initializing the swarm <span class="o">(</span>it will look similar to the following<span class="o">)</span>:
 
     docker swarm join --token SWMTKN-1-096qbnf2b9yywagu5ht3731zlpkeqazgctffolntsiljfp0m34-c4snnxplgwq2bd1ohta8k48b9 <span class="m">192</span>.168.65.3:2377
 
 To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-token manager&#39;</span> and follow the instructions.
 </code></pre></div>
-<p>Once this is done, you can continue with the installation running the following command:</p>
+<p>Once this is done, you can continue with the installation by running the following command:</p>
 <p><div class="highlight"><pre><span></span><code>curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker stack deploy -c portainer-agent-stack.yml portainer
@@ -5116,7 +5115,7 @@ To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-toke
 <p>First create the network:</p>
 <div class="highlight"><pre><span></span><code>docker network create --driver overlay --attachable portainer_agent_network
 </code></pre></div>
-<p>Deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster.</p>
+<p>To deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster:</p>
 <div class="highlight"><pre><span></span><code>docker service create --name portainer_agent --network portainer_agent_network --publish <span class="nv">mode</span><span class="o">=</span>host,target<span class="o">=</span><span class="m">9001</span>,published<span class="o">=</span><span class="m">9001</span> -e <span class="nv">AGENT_CLUSTER_ADDR</span><span class="o">=</span>tasks.portainer_agent --mode global --mount <span class="nv">type</span><span class="o">=</span><span class="nb">bind</span>
 <span class="nv">src</span><span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/lib/docker/volumes,dst<span class="o">=</span>/var/lib/docker/volumes –-mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/,dst<span class="o">=</span>/host portainer/agent
 </code></pre></div>
@@ -5124,7 +5123,7 @@ To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-toke
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Docker Swarm on Windows Container Service</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p>To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These, can be easy added through PowerShell, running the following commands:</p>
+<p>To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These can be easily added through PowerShell by running the following commands:</p>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;cluster_management&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">2377</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;node_communication_tcp&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">7946</span>

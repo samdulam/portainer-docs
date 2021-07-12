@@ -5060,15 +5060,15 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li>Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary <code class="highlight"><span class="no">ServiceAccount</span></code> and <code class="highlight"><span class="no">ClusterRoleBinding</span></code> for it to access the Kubernetes cluster.</li>
 <li>A default StorageClass configured (see below)</li>
 </ul>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0/deploy/requirements">requirements</a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Agent Versions</p>
 <p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Access Control &amp; RBAC</p>
-<p>Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.</p>
+<p>Kubernetes RBAC needs to enabled and working for Access Control to work properly in Portainer.</p>
 </div>
 <h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
 <hr />
@@ -5083,7 +5083,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </code></pre></div></p>
 <p>and replace <storage-class-name> with the name of your storage class      <br />
 Example: <code>kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'</code></p>
-<p>Alternatively, if installing using our helm chart you can add the following option with helm install:
+<p>Alternatively, if installing using our Helm chart you can add the following option with helm install:
 <div class="highlight"><pre><span></span><code>--set persistence.storageClass<span class="o">=</span>&lt;storage-class-name&gt;
 </code></pre></div></p>
 <hr />
@@ -5092,13 +5092,13 @@ Example: <code>kubectl patch storageclass local-path -p '{"metadata": {"annotati
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Deploy using Helm</label><div class="tabbed-content">
 <div class="admonition abstract">
 <h3 id="portainer-server-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Ensure you're using at least helm v3.2, which <a href="https://github.com/helm/helm/pull/7648">includes support</a> for the <code>--create-namespace</code> argument.</p>
-<p>First, add the Portainer helm repo running the following:</p>
+<p>Ensure you're using at least Helm v3.2, which <a href="https://github.com/helm/helm/pull/7648">includes support</a> for the <code>--create-namespace</code> argument.</p>
+<p>First, add the Portainer helm repo by running the following:</p>
 <div class="highlight"><pre><span></span><code>helm repo add portainer https://portainer.github.io/k8s/
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>helm repo update
 </code></pre></div>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<p>Based on how you would like expose the Portainer Service, select an option below:</p>
 <div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>helm install --create-namespace -n portainer portainer portainer/portainer
@@ -5281,7 +5281,7 @@ Example: <code>kubectl patch storageclass local-path -p '{"metadata": {"annotati
 </details>
 <h3 id="portainer-agent-only-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
 <p>Helm chart for Agent Only Deployments will be available soon.
-In the mean time please head over to YAML Manifests tab.</p>
+In the meantime please head over to YAML Manifests tab.</p>
 </div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Deploy using YAML Manifests</label><div class="tabbed-content">
@@ -5333,7 +5333,7 @@ In the mean time please head over to YAML Manifests tab.</p>
 <p>After a few minutes, you will see that Kubernetes is running:</p>
 <p><img alt="kubernetes_running" src="../assets/windows10-4.png" /></p>
 <h3 id="portainer-server-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<p>Based on how you would like expose the Portainer Service, select an option below:</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
@@ -5346,7 +5346,7 @@ In the mean time please head over to YAML Manifests tab.</p>
 </div>
 </div>
 <h3 id="portainer-agent-only-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
-<p>Choose one of the tabs below based on how you would like to expose the agent.</p>
+<p>Choose one of the tabs below based on how you would like to expose the agent:</p>
 <div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">NodePort</label><div class="tabbed-content">
 <p>Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
@@ -5364,16 +5364,16 @@ In the mean time please head over to YAML Manifests tab.</p>
 <hr />
 <details class="tip" open="open"><summary>Regarding Persisting Data</summary><p>The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.</p>
 <p>In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.</p>
-<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.</p>
+<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.</p>
 <p>The nodeSelector can be added in the following ways:</p>
 <ol>
 <li>
-<p>Edit your own values.yaml and set the value of nodeSelector like this:</p>
+<p>Edit your own values.yaml and set the value of nodeSelector:</p>
 <pre><code>nodeSelector: kubernetes.io/hostname: \&lt;YOUR NODE NAME&gt;
 </code></pre>
 </li>
 <li>
-<p>Explicictly set the target node when deploying/updating the helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
+<p>Explicitly set the target node when deploying/updating the helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
 </li>
 <li>
 <p>If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:</p>

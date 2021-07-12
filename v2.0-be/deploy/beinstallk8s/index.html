@@ -5049,16 +5049,23 @@
                 
                 
                 <h1 id="deploying-portainer-business-in-kubernetes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36h-.01m-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.378.378 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97h-.01m3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53c.05.06.11.1.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24l.13 2.24m-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31h.01m-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62v-.01m1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53.16.67m10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.375.375 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.611 5.611 0 0 1-2.47-3.09l-.2.03a.388.388 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.438.438 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45-.12-.06-.24-.13-.36-.21-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15.11.01.21.05.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02-.13-.04-.25-.09-.36-.15-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11z"/></svg></span> Deploying Portainer Business in Kubernetes</h1>
-<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0-be/deploy/requirements/">requirements</a>.</p>
+<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight containers on Kubernetes. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<p>Regardless of your configuration, you will need:</p>
+<ul>
+<li>A working and up to date Kubernetes cluster</li>
+<li>Access to run Helm or kubectl commands on your cluster</li>
+<li>Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary <code class="highlight"><span class="no">ServiceAccount</span></code> and <code class="highlight"><span class="no">ClusterRoleBinding</span></code> for it to access the Kubernetes cluster.</li>
+<li>A default StorageClass configured (see below)</li>
+</ul>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0-be/deploy/requirements/">requirements</a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Agent Versions</p>
 <p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Access Control &amp; RBAC</p>
-<p>Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.</p>
+<p>Kubernetes RBAC needs to enabled and working for Access Control to work properly in Portainer.</p>
 </div>
 <h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
 <hr />
@@ -5327,7 +5334,7 @@ In the mean time please head over to YAML Manifests tab.</p>
 <p>After a few minutes, you will see that Kubernetes is running:</p>
 <p><img alt="kubernetes_running" src="../assets/windows10-4.png" /></p>
 <h3 id="portainer-server-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<p>Based on how you would like expose the Portainer Service, select an option below:</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
@@ -5358,16 +5365,16 @@ In the mean time please head over to YAML Manifests tab.</p>
 <hr />
 <details class="tip" open="open"><summary>Regarding Persisting Data</summary><p>The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.</p>
 <p>In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.</p>
-<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.</p>
+<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.</p>
 <p>The nodeSelector can be added in the following ways:</p>
 <ol>
 <li>
-<p>Edit your own values.yaml and set the value of nodeSelector like this:</p>
+<p>Edit your own values.yaml and set the value of nodeSelector:</p>
 <pre><code>nodeSelector: kubernetes.io/hostname: \&lt;YOUR NODE NAME&gt;
 </code></pre>
 </li>
 <li>
-<p>Explicictly set the target node when deploying/updating the helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
+<p>Explicitly set the target node when deploying/updating the helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
 </li>
 <li>
 <p>If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:</p>

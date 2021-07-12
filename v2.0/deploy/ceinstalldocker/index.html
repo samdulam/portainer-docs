@@ -5057,14 +5057,14 @@
 <li>Administrator or sudo access on the machine that will host your Portainer instance.</li>
 <li>If you are using Docker Desktop on Windows you need to enable WSL2 if you need to run Linux containers.</li>
 </ul>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0/deploy/requirements">requirements</a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Agent Versions</p>
 <p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
 </div>
 <h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
-<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):</p>
+<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Docker on Linux</label><div class="tabbed-content">
 <div class="admonition abstract">
 <h3 id="portainer-server-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
@@ -5081,7 +5081,7 @@
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Docker on Windows WSL / Docker Desktop</label><div class="tabbed-content">
 <div class="admonition abstract">
 <p>Before you can deploy Portainer in Docker Standalone running in Windows, you need to install WSL. <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Read this guide to know more about WSL/WSL2</a></p>
-<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):</p>
+<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
 <h3 id="portainer-server-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
 <div class="highlight"><pre><span></span><code>docker volume create portainer_data
 </code></pre></div>
@@ -5095,7 +5095,7 @@
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Docker on Windows Container Service</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p>To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These, can be easy added trough PowerShell, running the following commands:</p>
+<p>To run Portainer in a Windows Server/Desktop Environment you need to create exceptions in the firewall. These can easily be added through PowerShell by running the following commands:</p>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;cluster_management&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">2377</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;node_communication_tcp&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">7946</span>
@@ -5115,13 +5115,13 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Install-Package -Name docker -ProviderName DockerMsftProvider
 </code></pre></div></p>
-<p>Lastly, you need to restart your Windows Server. After it has restarted, you're ready to deploy Portainer.</p>
+<p>Lastly, you need to restart your Windows Server. Once it has restarted you're ready to deploy Portainer.</p>
 <h3 id="portainer-server-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
 <p><div class="highlight"><pre><span></span><code>docker volume create portainer_data
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9000</span>:9000 --name portainer --restart always -v <span class="se">\\</span>.<span class="se">\p</span>ipe<span class="se">\d</span>ocker_engine:<span class="se">\\</span>.<span class="se">\p</span>ipe<span class="se">\d</span>ocker_engine -v portainer_data:C:<span class="se">\d</span>ata portainer/portainer-ce
 </code></pre></div></p>
-<p>Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.</p>
+<p>Now you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.</p>
 <h3 id="portainer-agent-only-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
 <p>To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:</p>
 <div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9001</span>:9001 --name portainer_agent --restart<span class="o">=</span>always -v <span class="se">\\</span>.<span class="se">\p</span>ipe<span class="se">\d</span>ocker_engine:<span class="se">\\</span>.<span class="se">\p</span>ipe<span class="se">\d</span>ocker_engine portainer/agent
@@ -5145,7 +5145,7 @@ If your system does not have the mentioned command, you can run a container to r
 </code></pre></div>
 <h3 id="inside-a-file">Inside a file</h3>
 <p>You can also store the plaintext password inside a file and use the <code>--admin-password-file</code> flag:</p>
-<p>Add your password to a file running the following command: </p>
+<p>Add your password to a file, for example with the following command: </p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span> -n mypassword &gt; /tmp/portainer_password
 </code></pre></div>
 <p>Now you can start the Portainer container by running:</p>
@@ -5172,25 +5172,25 @@ If your system does not have the mentioned command, you can run a container to r
 <p>For example, take a container started with the label owner=acme (note that this is an example label, you can define your own labels):</p>
 <div class="highlight"><pre><span></span><code>docker run -d --label <span class="nv">owner</span><span class="o">=</span>acme nginx
 </code></pre></div>
-<p>To hide this container, simply add the -l owner=acme option on the CLI when starting Portainer:</p>
+<p>To hide this container, simply add the <code>-l owner=acme</code> option on the CLI when starting Portainer:</p>
 <div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9000</span>:9000 -p <span class="m">8000</span>:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l <span class="nv">owner</span><span class="o">=</span>acme
 </code></pre></div>
 <p>Note that the -l flag can be repeated multiple times to specify multiple labels:</p>
 <div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9000</span>:9000 -p <span class="m">8000</span>:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l <span class="nv">owner</span><span class="o">=</span>acme -l <span class="nv">service</span><span class="o">=</span>secret
 </code></pre></div>
 <h2 id="use-your-own-logo">Use your own logo</h2>
-<p>You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:</p>
+<p>If you wish to replace our logo with your own, you can specify an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:</p>
 <p><div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9000</span>:9000 -p <span class="m">8000</span>:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo <span class="s2">&quot;https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg&quot;</span>
 </code></pre></div>
-This can also be completed via the GUI in the Portaner Settings menu</p>
+This can also be updated via the GUI in the Portainer Settings menu.</p>
 <h2 id="use-your-own-templates">Use your own templates</h2>
 <p>Portainer allows you to rapidly deploy containers using App Templates.</p>
 <p>By default Portainer templates will be used but you can also define your own templates.</p>
-<p>Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the HTTP API.</p>
+<p>Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the user interface or the HTTP API.</p>
 <p>Using the <code>--templates</code> flag you can specify an URL where the template file can be accessed via HTTP.</p>
 <div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9000</span>:9000 -p <span class="m">8000</span>:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json
 </code></pre></div>
-<p>Suggestion: You can host your template files in <a href="https://www.github.com">Github</a></p>
+<p>The template file must be accessible from Portainer without authentication. We suggest hosting the template files on <a href="https://www.github.com">Github</a>.</p>
 <h2 id="available-flags">Available flags</h2>
 <p>The following CLI flags are available:</p>
 <ul>
@@ -5201,7 +5201,7 @@ This can also be completed via the GUI in the Portaner Settings menu</p>
 <li><code>--edge-compute</code>: Automatically enable edge-compute features</li>
 <li><code>--hide-label, -l</code>: Hide containers with a specific label in the UI</li>
 <li><code>--host, -H</code>: Docker daemon endpoint</li>
-<li><code>--logo</code>: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified</li>
+<li><code>--logo</code>: URL to an image to be displayed as a logo in the UI. Uses the Portainer logo if not specified</li>
 <li><code>--snapshot-interval</code>: Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)</li>
 <li><code>--ssl</code>: Secure Portainer instance using SSL (default: false)</li>
 <li><code>--sslcert</code>: Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\certs\portainer.crt on Windows)</li>
