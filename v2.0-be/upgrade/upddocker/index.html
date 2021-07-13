@@ -5059,7 +5059,7 @@
 </code></pre></div>
 <p>Those 2 commands will stop and remove the container respectively. Doing this will NOT remove your other applications/containers/etc.</p>
 <p>Now that you have stopped and removed the old version of Portainer, you can run this command</p>
-<div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">8000</span>:8000 -p <span class="m">9000</span>:9000 --name<span class="o">=</span>portainer --restart<span class="o">=</span>always --pull<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee
+<div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">8000</span>:8000 -p <span class="m">9000</span>:9000 --name<span class="o">=</span>portainer --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee
 </code></pre></div>
 <p>That will deploy the newest version of Portainer on your system, using the persistent data and upgrade the DB</p>
 <p>Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.</p>
@@ -5071,7 +5071,7 @@
 </code></pre></div>
 <p>Those 2 commands will stop and remove the container respectively. Doing this will NOT remove your other applications/containers/etc.</p>
 <p>Now that you have stopped and removed the old version of Portainer Agent, you can run this command</p>
-<div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9001</span>:9001 --name portainer_agent --restart<span class="o">=</span>always --pull<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+<div class="highlight"><pre><span></span><code>docker run -d -p <span class="m">9001</span>:9001 --name portainer_agent --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
 </code></pre></div>
 <h2 id="notes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5V10M5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2H5m0 4v2h9v-2H5z"/></svg></span> Notes</h2>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md" target="_blank">Contribute to these docs</a></p>
